@@ -1,7 +1,23 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client"
+import DropDown from "@/component/dropdownmenu";
+import React, { useState } from "react";
+
 export default function page(){
+  const [OpenMenu, setOpenMenu] = useState(false)
     return(
-        <div  className="bg-zinc-700 h-screen flex justify-center items-center">
-          <div className=" w-50 h-50 flex justify-center items-center text-7xl font-extrabold">signup</div>
-            </div>
+        
+           <div>halo</div>
+
+            
+           
+          
+
+
+           
+            
+          
+
+          
     )
 }
