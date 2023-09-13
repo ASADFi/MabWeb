@@ -58,24 +58,24 @@ export default function navBar() {
         </div>
 
 
-        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"} px-4 py-2 `}>
+        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
           <BsHouseCheck className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
           <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>HOME</span>
         </div>
-        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"} px-4 py-2 `}>
+        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
           <IoGameControllerOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
           <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Game</span>
         </div>
-        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"} px-4 py-2 `}>
+        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
           <MdPrivacyTip className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
           <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Privacy</span>
         </div>
-        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"} px-4 py-2 `}>
+        <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
           <MdTipsAndUpdates className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
           <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Tips</span>
         </div>
 
-        <div className={`flex items-center rounded-md  bg-red-400 mt-64 ${!isOpen ? "px-2.5" : "px-4"} px-4 py-2 `}>
+        <div className={`flex items-center rounded-md  bg-red-400 mt-64 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
           <a href="/login">
             <IoLogOutOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
 
