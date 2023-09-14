@@ -8,6 +8,8 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Image from "next/image";
 import React, { useState } from "react";
 
+import navBar from '@/component/dropdownmenu';
+
 
 
 export default function page() {
@@ -28,9 +30,9 @@ export default function page() {
     return (
         <main className="h-screen w-full bg-zinc-700 overflow-hidden  ">
 
+            
 
-
-            <nav className="bg-white border-gray-200 dark:bg-slate-950 dark:border-gray-700">
+            {/* <nav className="bg-white border-gray-200 dark:bg-slate-950 dark:border-gray-700">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="#" className="flex items-center">
                         <Image
@@ -86,7 +88,7 @@ export default function page() {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
 
 
 
@@ -126,7 +128,7 @@ export default function page() {
 
 
 
-            <section className="  flex justify-center  items-center">
+            <section className="  flex justify-center  items-center ">
                 <div className="w-5/6 h-full bg-slate-950  rounded-xl  mt-9   shadow-[0_0_10px_purple] ">
                     <h1 className="flex  justify-center    text-3xl font-mono mt-4 text-white">
                         WELCOME MAB!
@@ -137,9 +139,9 @@ export default function page() {
 
                     {/* testing */}
 
-                    <section className="mt-5">
+                    <section className="mt-5 ">
 
-                        <div className="flex flex-row justify-evenly  ">
+                        <div className="flex flex-row justify-evenly  flex-wrap">
 
                             <div className=" w-44 ">
 
@@ -207,7 +209,7 @@ export default function page() {
 
 
                         </div>
-                        <div className="flex flex-row justify-evenly  ">
+                        <div className="flex flex-row justify-evenly flex-wrap  ">
 
                             <div className=" w-44 mt-4">
 
@@ -274,7 +276,7 @@ export default function page() {
 
 
                         </div>
-                        <div className="flex flex-row justify-evenly  ">
+                        <div className="flex flex-row justify-evenly flex- ">
 
 
                             <div className=" w-44 mt-12 ">
