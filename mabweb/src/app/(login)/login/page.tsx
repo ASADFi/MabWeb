@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { title } from "process";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 import Image from "next/image";
 export const metadata: Metadata = {
@@ -115,7 +116,7 @@ export default function page() {
 
           <div className="flex justify-center items-center font-thin text-base mt-4">
 
-            Don't have a account? <button className="text-lg font-normal " >
+            Don't  have a account? <button className="text-lg font-normal " >
               <a href="/signup"
               > Sign up
               </a>
