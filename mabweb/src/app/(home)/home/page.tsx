@@ -482,6 +482,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { BiSolidReport } from "react-icons/bi";
 
 import { BsFillArrowLeftCircleFill, BsHouseCheck } from "react-icons/bs";
 import { MdPrivacyTip, MdTipsAndUpdates } from "react-icons/md"
@@ -545,23 +546,35 @@ export default function navBar() {
                 </div>
 
 
-                <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+                <div className={`flex items-center rounded-md  bg-slate-600 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
                     <BsHouseCheck className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
                     <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>HOME</span>
                 </div>
-                <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
                     <a href="/game">
+                <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
                         <IoGameControllerOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
                         <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Game</span>
-                    </a>
                 </div>
+                    </a>
+                    <a href="/privacy">
                 <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
                     <MdPrivacyTip className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
                     <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Privacy</span>
                 </div>
+                    </a>
+
+                    <a href="/report">
                 <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+                    <BiSolidReport className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
+                    <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Report</span>
+                </div>
+                    </a>
+
+                <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+                    <a href="/tips">
                     <MdTipsAndUpdates className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
                     <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Tips</span>
+                    </a>
                 </div>
 
 
