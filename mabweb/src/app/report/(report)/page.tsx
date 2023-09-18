@@ -5,6 +5,7 @@ import { BiSolidReport } from "react-icons/bi";
 import { BsFillArrowLeftCircleFill, BsHouseCheck } from "react-icons/bs";
 import { IoGameControllerOutline, IoLogOutOutline } from "react-icons/io5";
 import { MdPrivacyTip, MdTipsAndUpdates } from "react-icons/md";
+import Table from "@/component/Table"
 
 export default function game() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -84,10 +85,10 @@ export default function game() {
             </div>
 
             <div className="flex justify-center items-center   w-full">
-                <h1 className=" w-56 flex justify-center items-center text-9xl font-semibold  text-slate-950">REPORTS</h1>
+           <Table/>
             </div>
 
-            <div id="datatable"></div>
+            
         </main>
     )
 }
