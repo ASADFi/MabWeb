@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
     "@headlessui/react": "^1.7.17",
+    "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.9",
     "@mui/styled-engine-sc": "^5.14.9",
     "@mui/x-data-grid": "^6.14.0",
