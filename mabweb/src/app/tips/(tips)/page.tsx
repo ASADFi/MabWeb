@@ -7,7 +7,7 @@ export default function game() {
     return (
         <main className="bg-zinc-600 h-screen flex">
             <title>MB SOLUTION |Tip</title>
-            <Navbar />
+            <Navbar screenName="Tips" />
 
 
             <div className="flex justify-center items-center   w-full">

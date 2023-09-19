@@ -116,7 +116,8 @@ export default function page() {
 
           <div className="flex justify-center items-center font-thin text-base mt-4">
 
-            Don't  have a account? <button className="text-lg font-normal " >
+            Don't  have a account? 
+            <button className="text-lg font-normal " >
               <a href="/signup"
               > Sign up
               </a>

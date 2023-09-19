@@ -10,92 +10,92 @@ import { MdPrivacyTip, MdTipsAndUpdates } from "react-icons/md";
 
 
 
-export default function Navbar() {
+export default function Navbar(props) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isOpen, setisOpen] = useState(true)
-    return(
+    return (
         <div className={`bg-slate-950 h-full p-5 pt-8 ${isOpen ? "w-72" : "w-20"}  duration-300 relative`}>
-                <BsFillArrowLeftCircleFill className={`text-white text-3xl absolute -right-3  border border-purple-900 cursor-pointer rounded-full ${isOpen && "rotate-180"} `}
-                    onClick={() => setisOpen(!isOpen)} />
+            <BsFillArrowLeftCircleFill className={`text-white text-3xl absolute -right-3  border border-purple-900 cursor-pointer rounded-full ${isOpen && "rotate-180"} `}
+                onClick={() => setisOpen(!isOpen)} />
 
-                <div className="inline-flex">
+            <div className="inline-flex">
 
 
-                    {(!isOpen && "hidden") ? (<a href="#" className="flex items-center">
-                        <Image
-                            src="/mab.png"
-                            width={200}
-                            height={50}
-                            alt="Picture of the author"
+                {(!isOpen && "hidden") ? (<a href="#" className="flex items-center">
+                    <Image
+                        src="/mab.png"
+                        width={200}
+                        height={50}
+                        alt="Picture of the author"
 
-                        />
-                    </a>) :(<a href="#" className="flex items-center ">
-                        <Image
-                            src="/logo.png"
-                            width={200}
-                            height={50}
-                            alt="Picture of the author"
+                    />
+                </a>) : (<a href="#" className="flex items-center ">
+                    <Image
+                        src="/logo.png"
+                        width={200}
+                        height={50}
+                        alt="Picture of the author"
 
-                        />
-                    </a>) }
+                    />
+                </a>)}
 
-                </div>
+            </div>
 
-<a href="/home">
-                <div className={`flex items-center rounded-md  bg-slate-600 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+            <a href="/home">
+                <div className={`flex items-center rounded-md ${props.screenName === "Home" ? "bg-purple-400" : "bg-slate-100"} mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
                     <BsHouseCheck className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
                     <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>HOME</span>
                 </div>
-                </a>
-                <a href="/game">
-                    <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
-                        <IoGameControllerOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
-                        <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Game</span>
-                    </div>
-                </a>
-                <a href="/privacy">
-                    <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
-                        <MdPrivacyTip className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
-                        <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Privacy</span>
-                    </div>
-                </a>
-
-                <a href="/report">
-                    <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
-                        <BiSolidReport className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
-                        <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Report</span>
-                    </div>
-                </a>
-
-                <div className={`flex items-center rounded-md  bg-slate-100 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
-                    <a href="/tips">
-                        <MdTipsAndUpdates className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
-                        <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Tips</span>
-                    </a>
+            </a>
+            <a href="/game">
+                <div className={`flex items-center rounded-md ${props.screenName === "Game" ? "bg-purple-400" : "bg-slate-100"} mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+                    <IoGameControllerOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
+                    <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Game</span>
                 </div>
-
-
-
-
-
-
-
-                <div className={`flex items-center rounded-md  bg-red-400 mt-52 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
-                    <a href="/login">
-                        <IoLogOutOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
-
-
-
-
-
-                        <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>LogOut</span>
-                    </a>
+            </a>
+            <a href="/privacy">
+                <div className={`flex items-center rounded-md  ${props.screenName === "Privacy" ? "bg-purple-400" : "bg-slate-100"} mt-6 ${!isOpen ? "px-2.5 " : "px-4"}  py-2 `}>
+                    <MdPrivacyTip className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
+                    <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Privacy</span>
                 </div>
+            </a>
 
+            <a href="/report">
+                <div className={`flex items-center rounded-md  ${props.screenName === "Report" ? "bg-purple-400" : "bg-slate-100"} mt-6 ${!isOpen ? "px-2.5 " : "px-4"}  py-2 `}>
+                    <BiSolidReport className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
+                    <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Report</span>
+                </div>
+            </a>
 
-
-
+            <div className={`flex items-center rounded-md ${props.screenName === "Tips" ? "bg-purple-400" : "bg-slate-100"} mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+                <a href="/tips">
+                    <MdTipsAndUpdates className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
+                    <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>Tips</span>
+                </a>
             </div>
+
+
+
+
+
+
+
+            <div className={`flex items-center rounded-md  bg-red-400 mt-6 ${!isOpen ? "px-2.5" : "px-4"}  py-2 `}>
+                <a href="/login">
+                    <IoLogOutOutline className={`text-lg font-semibold block float-left cursor-pointer text-black  ${isOpen && "mr-2"}`} />
+
+
+
+
+
+                    <span className={`text-black px-6 font-semibold ${!isOpen && "hidden"}`}>LogOut</span>
+                </a>
+            </div>
+
+
+
+
+        </div>
     )
 }
 

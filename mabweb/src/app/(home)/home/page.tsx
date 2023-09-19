@@ -35,7 +35,7 @@ export default function home() {
     return (
           <main className=" flex bg-zinc-700 h-screen ">
             <title>MAB SOLUTION |Home</title>
-            <Navbar />
+            <Navbar screenName="Home" />
 
             {/* <div className="p-16 ml-6 "> */}
             <div className="h-full w-full bg-slate-950  rounded-xl  ml-6   shadow-[0_0_10px_purple]">
